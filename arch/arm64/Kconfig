@@ -232,6 +232,16 @@ config ARCH_MSM8916
 	  This enables support for the MSM8916 chipset. If you dont
 	  know what do here, say N
 
+config TRUNK_DTB
+	depends on ARCH_MSM8916
+	default y
+	bool "Elephone Trunk Device DTBs"
+	help
+	  Only include Elephone Trunk specific DTBs to limit the number that 
+	  get built during kernel compilation.
+
+	  If unsure, say "n".
+
 config ARCH_MSM8994
 	bool "Enable Support for Qualcomm MSM8994"
 	depends on ARCH_MSM
