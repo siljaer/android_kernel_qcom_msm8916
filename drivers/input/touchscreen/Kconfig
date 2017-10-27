@@ -1039,6 +1039,10 @@ config TOUCHSCREEN_GT9XX
 
 source "drivers/input/touchscreen/gt9xx/Kconfig"
 
+if MACH_TRUNK
+source "drivers/input/touchscreen/gt9xx-trunk/Kconfig"
+endif # MACH_TRUNK
+
 config TOUCHSCREEN_BU21150
 	tristate "JDI AFE BU21150"
 	depends on SPI_MASTER
