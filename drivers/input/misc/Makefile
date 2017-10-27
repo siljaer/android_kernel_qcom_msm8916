@@ -77,7 +77,12 @@ obj-$(CONFIG_SENSORS_LIS3DH)		+= lis3dh_acc.o
 obj-$(CONFIG_SENSORS_AP3426)		+= ap3426.o
 obj-$(CONFIG_SENSORS_BMA2X2)	+= bstclass.o
 
+ifeq ($(CONFIG_MACH_TRUNK),y)
+obj-$(CONFIG_SENSORS_BMA2X2)	+= bma2x2-trunk.o
+else
 obj-$(CONFIG_SENSORS_BMA2X2)	+= bma2x2.o
+endif # MACH_TRUNK
+
 obj-$(CONFIG_SENSORS_LTR553)	+= ltr553.o
 
 ifeq ($(CONFIG_SENSORS_BMA2X2_ENABLE_INT1),y)
