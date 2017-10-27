@@ -1,0 +1,9 @@
+# Trunk configuration options
+
+config MACH_TRUNK
+	bool "Elephone Trunk (MSM8916) support"
+	depends on ARCH_MSM8916
+	help
+	  Support for MSM8916 Elephone Trunk
+
+
